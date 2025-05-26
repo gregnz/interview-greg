@@ -3,6 +3,7 @@ import type {RequestHandler} from '@sveltejs/kit';
 import {json} from '@sveltejs/kit';
 
 export const POST: RequestHandler = async ({request, platform, url}) => {
+    console.log("+server.ts POST handler")
     try {
         const body = await request.json();
         const messagesFromClient = body.messages;
