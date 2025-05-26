@@ -48,7 +48,7 @@
             // { response: "AI's answer" } from the LLM
             // or whatever structure your AI worker actually returns
             console.log(data)
-            const aiResponseText = JSON.parse(data.aiResponse?).response || "Sorry, I couldn't get a response.";
+            const aiResponseText = JSON.parse(data.aiResponse).response || "Sorry, I couldn't get a response.";
 
 
             messages.update(currentMessages => [
